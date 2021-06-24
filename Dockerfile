@@ -1,7 +1,7 @@
 FROM python:3.8.6-buster
 
 COPY api /api
-COPY TaxFareModel /TaxiFareModel
+COPY TaxiFareModel /TaxiFareModel
 COPY requirements.txt /requirements.txt
 
 COPY model.joblib model.joblib
