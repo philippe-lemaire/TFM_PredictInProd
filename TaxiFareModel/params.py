@@ -1,11 +1,11 @@
 ### MLFLOW configuration - - - - - - - - - - - - - - - - - - -
 
 MLFLOW_URI = "https://mlflow.lewagon.co/"
-EXPERIMENT_NAME = "[country] [city] [user] model + version"
+EXPERIMENT_NAME = "[FR]] [lyon] [philippe-lemaire] linreg + inprod"
 
 ### DATA & MODEL LOCATIONS  - - - - - - - - - - - - - - - - - - -
 
-PATH_TO_LOCAL_MODEL = 'model.joblib'
+PATH_TO_LOCAL_MODEL = "model.joblib"
 
 AWS_BUCKET_TEST_PATH = "s3://wagon-public-datasets/taxi-fare-test.csv"
 
@@ -20,14 +20,14 @@ AWS_BUCKET_TEST_PATH = "s3://wagon-public-datasets/taxi-fare-test.csv"
 
 ### GCP Storage - - - - - - - - - - - - - - - - - - - - - -
 
-BUCKET_NAME = 'XXX'
+BUCKET_NAME = "wagon-data-630-lemaire"
 
 ##### Data  - - - - - - - - - - - - - - - - - - - - - - - -
 
 # train data file location
 # /!\ here you need to decide if you are going to train using the provided and uploaded data/train_1k.csv sample file
 # or if you want to use the full dataset (you need need to upload it first of course)
-BUCKET_TRAIN_DATA_PATH = 'data/train_1k.csv'
+BUCKET_TRAIN_DATA_PATH = "data/train_1k.csv"
 
 ##### Training  - - - - - - - - - - - - - - - - - - - - - -
 
@@ -36,10 +36,10 @@ BUCKET_TRAIN_DATA_PATH = 'data/train_1k.csv'
 ##### Model - - - - - - - - - - - - - - - - - - - - - - - -
 
 # model folder name (will contain the folders for all trained model versions)
-MODEL_NAME = 'taxifare'
+MODEL_NAME = "taxifare"
 
 # model version folder name (where the trained model.joblib file will be stored)
-MODEL_VERSION = 'v2'
+MODEL_VERSION = "v2"
 
 ### GCP AI Platform - - - - - - - - - - - - - - - - - - - -
 
