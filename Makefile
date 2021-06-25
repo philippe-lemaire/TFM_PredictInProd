@@ -95,3 +95,19 @@ clean:
 
 run_api:
 	uvicorn api.fast:app --reload  # load web server with code autoreload
+
+
+### Docker stuff
+
+DOCKER_IMAGE_NAME = my-first-docker-image
+build_docker:
+	docker build -t eu.gcr.io/${PROJECT_ID}/${DOCKER_IMAGE_NAME} .
+
+run_docker_locally:
+	docker run -e PORT=8000 -p 8000:8000 eu.gcr.io/${PROJECT_ID}/${DOCKER_IMAGE_NAME}
+
+deploy_docker:
+	docker push eu.gcr.io/${PROJECT_ID}/${DOCKER_IMAGE_NAME}
+
+run_docker_at_google:
+	gcloud run deploy --image eu.gcr.io/${PROJECT_ID}/${DOCKER_IMAGE_NAME} --platform managed --region europe-west1
